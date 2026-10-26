@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "FastFood POS",
+    "slug": "fastfood-pos",
+    "version": "1.0.1",
+    "orientation": "landscape",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "ios": {
+      "supportsTablet": true,
+      "icon": "./assets/icon.png"
+    },
+    "android": {
+      "package": "com.fastfood.pos",
+      "versionCode": 3,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1E3A5F"
+      },
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-status-bar",
+        {
+          "hidden": true
+        }
+      ],
+      "react-native-thermal-printer-driver",
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "LANDSCAPE"
+        }
+      ],
+      "./plugins/withSensorLandscape.js",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#1E3A5F"
+        }
+      ]
+    ],
+    "extra": {
+      "expo-status-bar": {
+        "hidden": true
+      },
+      "eas": {
+        "projectId": "57f66f64-0f8b-4a16-b6a0-74a3d73b4a12"
+      }
+    },
+    "owner": "yasinvahora56"
+  }
+}
